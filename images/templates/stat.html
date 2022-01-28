@@ -1,0 +1,20 @@
+{% extends 'homepage.html' %}
+{% block content %}
+<div class='container w-auto'>
+    <div class='row justify-content-center'>
+        Total images: {{ total_images }}
+        </div>
+        <div class='row justify-content-center'>
+        Unique images: {{ unique_images }}
+        </div>
+        <div class='row justify-content-center'>
+        Total size (MB): {{ size_images_MB }}
+        </div>
+        <div class='row justify-content-center'>
+        Total comments: {{ total_comments }}
+        </div>
+        <div class='row justify-content-center'>
+        Unique comments: {{ unique_comments }}
+    </div>
+</div>
+    {% endblock %}

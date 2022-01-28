@@ -1,0 +1,25 @@
+{% extends 'homepage.html' %}
+    {% block content %}
+    <div class="container w-auto">
+        <div class="row justify-content-md-center">
+    {% for image in results %}
+        <div class="card mb-3 mx-3" style="width: 25rem; height: 35rem;">
+            <img src={{ image.img }} class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">{{ image.name }}</h5>
+              <p class="card-text"><small class="text-muted">
+                Uploaded: {{ image.date_upload }}<br>
+                Updated: {{ image.date_updated }}</small></p><br>
+                {% for comment in image.comments %}
+                <p class="card-text">
+                Comment: {{ comment.text }}<br></p>
+                <p class="card-text"><small class="text-muted">
+                Posted: {{ comment.date_post }}<br>
+                Updated: {{ comment.date_updated }}<br><br></small></p>
+                {% endfor %}
+            </div>
+        </div>
+            {% endfor %}
+        </div>
+      </div>
+    {% endblock %}

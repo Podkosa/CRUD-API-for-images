@@ -1,0 +1,2 @@
+docker build --tag imagion-test .
+docker run --publish 8000:8000 imagion-test

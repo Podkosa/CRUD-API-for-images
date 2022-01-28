@@ -1,0 +1,19 @@
+{% extends 'homepage.html' %}
+    {% block content %}
+    <div class="container w-auto">
+        <div class="row justify-content-md-center">
+    {% for comment in results %}
+        <div class="card mb-3 mx-3" style="width: 25rem; height: 10rem;">
+            <div class="card-body">
+              <h5 class="card-title">Comment to image #{{ comment.img }}</h5>
+              <p class="card-text">
+              {{ comment.text }}<br></p>
+              <p class="card-text"><small class="text-muted">
+                Uploaded: {{ comment.date_post }}<br>
+                Updated: {{ comment.date_updated }}</small></p><br>
+            </div>
+        </div>
+            {% endfor %}
+        </div>
+      </div>
+    {% endblock %}
